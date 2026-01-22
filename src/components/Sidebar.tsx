@@ -13,6 +13,7 @@ export default function Sidebar({ isOpen }: SidebarProps) {
             items: [
                 { name: 'Introduction', path: '/', icon: Book },
                 { name: 'Core Concepts', path: '/docs/core-concepts', icon: Zap },
+                { name: 'Fine-tuning vs Context', path: '/docs/fine-tuning-vs-context', icon: Zap },
                 { name: 'Embeddings Guide', path: '/docs/embeddings-guide', icon: Book },
                 { name: 'Vector Databases', path: '/docs/vector-databases', icon: Zap },
                 { name: 'RAG Architectures', path: '/docs/rag-architectures', icon: Zap },
@@ -32,6 +33,7 @@ export default function Sidebar({ isOpen }: SidebarProps) {
                 { name: 'Memory Systems', path: '/docs/memory-systems', icon: Zap },
                 { name: 'AGENTS.md', path: '/docs/agents-standard', icon: Book },
                 { name: 'Agent Skills', path: '/docs/agent-skills-guide', icon: Zap },
+                { name: 'Agent Protocol', path: '/docs/agent-protocol', icon: Terminal },
                 { name: 'OpenCode Guide', path: '/docs/opencode-guide', icon: Terminal },
             ]
         },
@@ -39,13 +41,25 @@ export default function Sidebar({ isOpen }: SidebarProps) {
             title: "Protocols",
             items: [
                 { name: 'MCP & Tools', path: '/docs/mcp-and-tools', icon: Book },
+                { name: 'Tool Use & Function Calling', path: '/docs/tool-use-function-calling', icon: Zap },
                 { name: 'Structured Outputs', path: '/docs/structured-outputs', icon: Zap },
+            ]
+        },
+        {
+            title: "Skills Library",
+            items: [
+                { name: 'Web Browsing', path: '/docs/web-browsing-skills', icon: Zap },
+                { name: 'Code Execution', path: '/docs/code-execution-skills', icon: Terminal },
+                { name: 'File Manipulation', path: '/docs/file-manipulation-skills', icon: Book },
+                { name: 'Data Analysis', path: '/docs/data-analysis-skills', icon: Zap },
             ]
         },
         {
             title: "Evaluation & Security",
             items: [
                 { name: 'Evaluation Guide', path: '/docs/evaluation-guide', icon: Shield },
+                { name: 'Benchmarks Guide', path: '/docs/benchmarks-guide', icon: Shield },
+                { name: 'Tracing & Observability', path: '/docs/tracing-observability', icon: Zap },
                 { name: 'LLM Red Teaming', path: '/docs/llm-red-teaming', icon: Shield },
             ]
         }

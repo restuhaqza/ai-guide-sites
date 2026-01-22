@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import MarkdownViewer from '../components/MarkdownViewer';
+import TableOfContents from '../components/TableOfContents';
+import ReadingProgress from '../components/ReadingProgress';
 import { getDocContent } from '../lib/content';
 
 export default function ArticlePage() {
@@ -51,13 +53,22 @@ export default function ArticlePage() {
     }
 
     return (
-        <div className="max-w-4xl mx-auto">
-            {meta?.title && (
-                <h1 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-brand-neon-blue to-brand-neon-pink italic tracking-wide">
-                    {meta.title}
-                </h1>
-            )}
-            <MarkdownViewer content={content} />
+        <div className="relative">
+            <ReadingProgress />
+
+            <div className="max-w-7xl mx-auto flex gap-12 items-start">
+                <div className="flex-1 min-w-0">
+                    {meta?.title && (
+                        <h1 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-brand-neon-blue to-brand-neon-pink italic tracking-wide">
+                            {meta.title}
+                        </h1>
+                    )}
+                    <MarkdownViewer content={content} />
+                </div>
+
+                {/* Table of Contents - Hidden on mobile/tablet, visible on XL screens */}
+                <TableOfContents content={content} />
+            </div>
         </div>
     );
 }
