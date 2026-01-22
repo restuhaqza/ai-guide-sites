@@ -13,7 +13,6 @@ export default function MermaidDiagram({ definition }: MermaidDiagramProps) {
 
     // Pan and zoom state - start with scale 1, will auto-fit after render
     const [scale, setScale] = useState(1);
-    const [initialScale, setInitialScale] = useState(1);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isDragging, setIsDragging] = useState(false);
     const dragStart = useRef({ x: 0, y: 0 });
@@ -52,7 +51,6 @@ export default function MermaidDiagram({ definition }: MermaidDiagramProps) {
     const handleAutoFit = useCallback(() => {
         const fitScale = calculateFitScale();
         setScale(fitScale);
-        setInitialScale(fitScale);
         setPosition({ x: 0, y: 0 });
     }, [calculateFitScale]);
 
