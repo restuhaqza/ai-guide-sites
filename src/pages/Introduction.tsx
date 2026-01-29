@@ -1,7 +1,20 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot, Cpu, Terminal, Zap } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 export default function Introduction() {
+    // Set SEO for homepage
+    const baseUrl = window.location.origin;
+    useSEO({
+        title: 'AI Guide - Make it your AI Agentic more smart',
+        description: 'A comprehensive guide to building, evaluating, and deploying AI agents. Learn about LLMs, protocols, skills, and safety.',
+        canonical: baseUrl,
+        ogTitle: 'AI Guide - Make it your AI Agentic more smart',
+        ogDescription: 'A comprehensive guide to building, evaluating, and deploying AI agents.',
+        ogImage: `${baseUrl}/og-image.svg`,
+        ogType: 'website',
+    });
+
     return (
         <div className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center overflow-hidden">
             {/* Retro Background Effects */}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ai-guide.vercel.app/sitemap.xml
+
+# Crawl Delay (optional - can be removed if not needed)
+Crawl-delay: 1
