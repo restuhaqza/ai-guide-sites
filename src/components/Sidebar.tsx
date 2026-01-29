@@ -20,33 +20,26 @@ export default function Sidebar({ isOpen }: SidebarProps) {
             ]
         },
         {
-            title: "Prompts",
-            items: [
-                { name: 'Standards', path: '/docs/prompt-engineering-standards', icon: Zap },
-            ]
-        },
-        {
-            title: "Agents",
+            title: "Agent Patterns",
             items: [
                 { name: 'Single-Agent Patterns', path: '/docs/single-agent-patterns', icon: Shield },
                 { name: 'Multi-Agent Architectures', path: '/docs/multi-agent-architectures', icon: Shield },
+                { name: 'Subagent & Orchestrator', path: '/docs/subagent-orchestrator', icon: Shield },
                 { name: 'Memory Systems', path: '/docs/memory-systems', icon: Zap },
-                { name: 'AGENTS.md', path: '/docs/agents-standard', icon: Book },
-                { name: 'Agent Skills', path: '/docs/agent-skills-guide', icon: Zap },
-                { name: 'Agent Protocol', path: '/docs/agent-protocol', icon: Terminal },
-                { name: 'OpenCode Guide', path: '/docs/opencode-guide', icon: Terminal },
             ]
         },
         {
-            title: "Protocols",
+            title: "Building Agents",
             items: [
-                { name: 'MCP & Tools', path: '/docs/mcp-and-tools', icon: Book },
-                { name: 'Tool Use & Function Calling', path: '/docs/tool-use-function-calling', icon: Zap },
+                { name: 'Agent Protocol', path: '/docs/agent-protocol', icon: Terminal },
+                { name: 'Agent Skills', path: '/docs/agent-skills-guide', icon: Zap },
+                { name: 'Prompts Standards', path: '/docs/prompt-engineering-standards', icon: Zap },
                 { name: 'Structured Outputs', path: '/docs/structured-outputs', icon: Zap },
+                { name: 'Tool Use & Function Calling', path: '/docs/tool-use-function-calling', icon: Zap },
             ]
         },
         {
-            title: "Skills Library",
+            title: "Capabilities",
             items: [
                 { name: 'Web Browsing', path: '/docs/web-browsing-skills', icon: Zap },
                 { name: 'Code Execution', path: '/docs/code-execution-skills', icon: Terminal },
@@ -55,7 +48,17 @@ export default function Sidebar({ isOpen }: SidebarProps) {
             ]
         },
         {
-            title: "Evaluation & Security",
+            title: "Infrastructure & Tools",
+            items: [
+                { name: 'Sandbox Environments', path: '/docs/sandbox-environments', icon: Shield },
+                { name: 'Sprites.dev', path: '/docs/sprites-dev', icon: Shield },
+                { name: 'Moltbot Configuration', path: '/docs/moltbot-guide', icon: Terminal },
+                { name: 'OpenCode Guide', path: '/docs/opencode-guide', icon: Terminal },
+                { name: 'MCP & Tools', path: '/docs/mcp-and-tools', icon: Book },
+            ]
+        },
+        {
+            title: "Reliability & Safety",
             items: [
                 { name: 'Evaluation Guide', path: '/docs/evaluation-guide', icon: Shield },
                 { name: 'Benchmarks Guide', path: '/docs/benchmarks-guide', icon: Shield },
